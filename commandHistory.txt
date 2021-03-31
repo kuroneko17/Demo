@@ -1,0 +1,117 @@
+
+    1  cd ~/Code
+    2  ll
+    3  git clone https://github.com/kuroneko17/Dome.git demo
+    4  git clone git@github.com/kuronkeo17/Dome.git demo
+    5  git clone git@github.com:kuroneko17/Dome.git demo
+    6  ll
+    7  git clone https://github.com/kuroneko17/Demo.git demo
+    8  ll
+    9  cd demo
+   10  ls -a
+   11  git status
+   12  echo 'Hello World' > first.txt
+   13  ll
+   14  git status
+   15  git log 
+   16  git diff
+   17  git diff --staged
+   18  git add first.txt
+   19  git status
+   20  git diff --cached
+   21  echo '# Demo 
+ Commit test.' > README.md
+   22  cat README.md
+   23  git status 
+   24  git diff 
+   25  git add .
+   26  git config --global user.name 'testSYLou'
+   27  git config --global user.email 'testSYLou@gmail.com'
+   28  git branch -acc
+   29  git branch -avv
+   30  git commit -m 'Commit test'
+   31  git status
+   32  git diff 
+   33  git push 
+   34  ssh -T git@github.com:kuroneko17
+   35  ssh -T git@github.com
+   36  git push 
+   37  git pull 
+   38  git pull
+   39  git diff
+   40  git pull origin master
+   41  git status
+   42  git diff
+   43  git log
+   44  git diff
+   45  cat first.txt
+   46  git diff
+   47  vim first.txt
+   48  vim README.md
+   49  git diff
+   50  git status
+   51  git add .
+   52  git status
+   53  git commit -m 'fixed conflicts.'
+   54  git status
+   55  git diff
+   56  git log
+   57  git push
+   58  git branch -avv
+   59  git push
+   60  git branch -avv
+   61  git log
+   62  vim first.txt
+   63  git status
+   64  git add first.txt
+   65  git commit -m 'Roll back test.'
+   66  git diff
+   67  git status
+   68  git log
+   69  git branch -avv
+   70  git reset --soft HEAD^
+   71  git status
+   72  git dif
+   73  git diff
+   74  git log
+   75  git branch -avv
+   76  git log
+   77  vim first.txt
+   78  git status
+   79  git log
+   80  git add .
+   81  git status
+   82  git commit -m 'commit file first.txt'
+   83  git log
+   84  git push
+   85  git status
+   86  git branch -avv
+   87  git status
+   88  git log --oneline
+   89  git reset --soft HEAD^
+   90  git status
+   91  git diff
+   92  git status
+   93  git branch -avv
+   94  vim README.md
+   95  git diff
+   96  git status
+   97  git add .
+   98  git commit -m 'Anther commit.'
+   99  git status
+  100  git branch -avv
+  101  vim commandHistory.txt
+  102  gedit commandHistory.txt
+
+
+shiyanlou:demo/ (master) $ git status                                [23:59:53]
+位于分支 master
+您的分支和 'origin/master' 出现了偏离，
+并且分别有 1 和 1 处不同的提交。
+  （使用 "git pull" 来合并远程分支）
+无文件要提交，干净的工作区
+shiyanlou:demo/ (master) $ git branch -avv                            [0:00:06]
+* master                5cec257 [origin/master：领先 1，落后 1] Anther commit.
+  remotes/origin/HEAD   -> origin/master
+  remotes/origin/master 014b7f1 commit file first.txt
+
