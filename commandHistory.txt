@@ -147,3 +147,91 @@ shiyanlou:demo/ (dev1) $ git branch -avv                             [13:49:33]
   remotes/origin/HEAD   -> origin/master
   remotes/origin/master 5779cb3 Git branch test.
 
+
+
+shiyanlou:demo/ (dev1) $ git push origin dev1:dev1                   [14:02:27]
+对象计数中: 4, 完成.
+Delta compression using up to 4 threads.
+压缩对象中: 100% (3/3), 完成.
+写入对象中: 100% (4/4), 799 bytes | 0 bytes/s, 完成.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'dev1' on GitHub by visiting:
+remote:      https://github.com/kuroneko17/Demo/pull/new/dev1
+remote: 
+To git@github.com:kuroneko17/Demo.git
+ * [new branch]      dev1 -> dev1
+shiyanlou:demo/ (dev1) $ git br                                      [14:12:39]
+  dev                   5779cb3 Git branch test.
+* dev1                  72a1890 New function test.
+  master                5779cb3 [origin/master] Git branch test.
+  remotes/origin/HEAD   -> origin/master
+  remotes/origin/dev1   72a1890 New function test.
+  remotes/origin/master 5779cb3 Git branch test.
+shiyanlou:demo/ (dev1) $ git branch -u origin/dev1                   [14:13:30]
+分支 dev1 设置为跟踪来自 origin 的远程分支 dev1。
+shiyanlou:demo/ (dev1) $ git branch -avv                             [15:16:54]
+  dev                   5779cb3 Git branch test.
+* dev1                  72a1890 [origin/dev1] New function test.
+  master                5779cb3 [origin/master] Git branch test.
+  remotes/origin/HEAD   -> origin/master
+  remotes/origin/dev1   72a1890 New function test.
+  remotes/origin/master 5779cb3 Git branch test.
+shiyanlou:demo/ (dev1) $ git branch --unset-upstream origin/dev1     [15:17:25]
+fatal: 分支 'origin/dev1' 没有上游信息
+shiyanlou:demo/ (dev1) $ git branch --unset-upstream                 [15:19:42]
+shiyanlou:demo/ (dev1) $ git br                                      [15:20:22]
+  dev                   5779cb3 Git branch test.
+* dev1                  72a1890 New function test.
+  master                5779cb3 [origin/master] Git branch test.
+  remotes/origin/HEAD   -> origin/master
+  remotes/origin/dev1   72a1890 New function test.
+  remotes/origin/master 5779cb3 Git branch test.
+shiyanlou:demo/ (dev1) $                                             [15:20:27]
+shiyanlou:demo/ (dev1) $                                             [15:21:59]
+shiyanlou:demo/ (dev1) $ git checkout dev                            [15:21:59]
+切换到分支 'dev'
+shiyanlou:demo/ (dev) $ git push -u origin dev:dev                   [15:22:18]
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/kuroneko17/Demo/pull/new/dev
+remote: 
+To git@github.com:kuroneko17/Demo.git
+ * [new branch]      dev -> dev
+
+分支 dev 设置为跟踪来自 origin 的远程分支 dev。
+shiyanlou:demo/ (dev) $ git branch -avv                              [15:23:31]
+* dev                   5779cb3 [origin/dev] Git branch test.
+  dev1                  72a1890 New function test.
+  master                5779cb3 [origin/master] Git branch test.
+  remotes/origin/HEAD   -> origin/master
+  remotes/origin/dev    5779cb3 Git branch test.
+  remotes/origin/dev1   72a1890 New function test.
+  remotes/origin/master 5779cb3 Git branch test.
+shiyanlou:demo/ (dev) $ git push origin :dev                         [15:23:40]
+To git@github.com:kuroneko17/Demo.git
+ - [deleted]         dev
+shiyanlou:demo/ (dev) $ git push origin --delete dev1                [15:34:55]
+To git@github.com:kuroneko17/Demo.git
+ - [deleted]         dev1
+shiyanlou:demo/ (dev) $ git branch -avv                              [15:35:23]
+* dev                   5779cb3 [origin/dev: 丢失] Git branch test.
+  dev1                  72a1890 New function test.
+  master                5779cb3 [origin/master] Git branch test.
+  remotes/origin/HEAD   -> origin/master
+  remotes/origin/master 5779cb3 Git branch test.
+
+shiyanlou:demo/ (dev) $ git branch --unset-upstream dev              [15:40:09]
+shiyanlou:demo/ (dev) $ git branch -avv                              [15:40:44]
+* dev                   5779cb3 Git branch test.
+  dev1                  72a1890 New function test.
+  master                5779cb3 [origin/master] Git branch test.
+  remotes/origin/HEAD   -> origin/master
+  remotes/origin/master 5779cb3 Git branch test.
+shiyanlou:demo/ (dev) $ git branch -m ved                            [15:40:53]
+shiyanlou:demo/ (ved) $ git checkout dev1                            [15:49:47]
+切换到分支 'dev1'
+
+
