@@ -115,3 +115,35 @@ shiyanlou:demo/ (master) $ git branch -avv                            [0:00:06]
   remotes/origin/HEAD   -> origin/master
   remotes/origin/master 014b7f1 commit file first.txt
 
+shiyanlou:demo/ (master) $ git branch dev                            [13:39:37]
+shiyanlou:demo/ (master) $ git branch -avv                           [13:40:01]
+  dev                   5779cb3 Git branch test.
+* master                5779cb3 [origin/master] Git branch test.
+  remotes/origin/HEAD   -> origin/master
+  remotes/origin/master 5779cb3 Git branch test.
+shiyanlou:demo/ (master) $ git config --global alias.ch checkout     [13:40:09]
+shiyanlou:demo/ (master) $ cat -n ~/.gitconfig                       [13:46:45]
+     1	[user]
+     2		name = testSYLou
+     3		email = testSYLou@gmail.com
+     4	[alias]
+     5		st = status
+     6		br = branch -avv
+     7		com = commit -m
+     8		ch = checkout
+shiyanlou:demo/ (master) $ git checkout dev                          [13:47:01]
+切换到分支 'dev'
+shiyanlou:demo/ (dev) $ git branch -avv                              [13:47:37]
+* dev                   5779cb3 Git branch test.
+  master                5779cb3 [origin/master] Git branch test.
+  remotes/origin/HEAD   -> origin/master
+  remotes/origin/master 5779cb3 Git branch test.
+shiyanlou:demo/ (dev) $ git checkout -b dev1                         [13:48:04]
+切换到一个新分支 'dev1'
+shiyanlou:demo/ (dev1) $ git branch -avv                             [13:49:33]
+  dev                   5779cb3 Git branch test.
+* dev1                  5779cb3 Git branch test.
+  master                5779cb3 [origin/master] Git branch test.
+  remotes/origin/HEAD   -> origin/master
+  remotes/origin/master 5779cb3 Git branch test.
+
